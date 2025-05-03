@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.54280f4c.css",
+    "main.js": "/static/js/main.151214f8.js",
+    "static/media/3_1.png": "/static/media/3_1.fc04b5057621c992d9a9.png",
+    "static/media/1_1.png": "/static/media/1_1.5faeec99f654b884b872.png",
+    "static/media/6_1.png": "/static/media/6_1.95c2e5138f920ccda3dc.png",
+    "static/media/5_1.png": "/static/media/5_1.3c3a678b126b87bee54e.png",
+    "static/media/banner.png": "/static/media/banner.246b83a987634bd8d7d1.png",
+    "static/media/president.png": "/static/media/president.85867ff937640a2a520b.png",
+    "static/media/library.png": "/static/media/library.00c5af2b1d441c57ce68.png",
+    "static/media/final1.png": "/static/media/final1.86f091b27074560ac8ed.png",
+    "static/media/doc.png": "/static/media/doc.16591a0cd8dab6ff048d.png",
+    "static/media/jobs.png": "/static/media/jobs.4db9ddb9e8b6ddba848b.png",
+    "static/media/certificate.png": "/static/media/certificate.6567da799c57647f551e.png",
+    "static/media/notice.png": "/static/media/notice.dbc109e0c51ab24648ef.png",
+    "static/media/form.png": "/static/media/form.18c7a8c9ca061e9f13a5.png",
+    "static/media/registered.png": "/static/media/registered.3e65a1aa588a009caf96.png",
+    "static/media/flyer.png": "/static/media/flyer.aab28bc8793c4a95054d.png",
+    "static/media/clipboard.png": "/static/media/clipboard.63bf270ce06c27f992c1.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.54280f4c.css.map": "/static/css/main.54280f4c.css.map",
+    "main.151214f8.js.map": "/static/js/main.151214f8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54280f4c.css",
+    "static/js/main.151214f8.js"
+  ]
+}
