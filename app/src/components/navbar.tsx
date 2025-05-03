@@ -39,7 +39,9 @@ const navLinks = [
         route: "/ApplicationForMembership",
         name: "Application For Membership",
       },
-      { route: "/ListOfMembership", name: "List of Members" },
+      { route: "/ListOfMembership", name: "Life Members" },
+      {route:"/OrdinaryMembers", name:"Ordinary Members"},
+      {route:"/StudentMembers", name:"Student Members"},
     ],
   },
   {
@@ -96,7 +98,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex flex-col justify-between">
+    <nav className="flex flex-col z-30 justify-between">
       <Link to="/">
         <div className=" rounded-lg w-full h-full ">
           <img

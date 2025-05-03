@@ -48,6 +48,8 @@ import LISJobs from "../pages/quick/lis-jobs";
 import PublicLibraryActs from "../pages/quick/public-library-act";
 import LifeMembers from "../pages/membership/lifemembers";
 import Videos from "../pages/miscellaneous/videos";
+import Ordinarymembers from "../pages/membership/ordinarymembers";
+import StudentMember from "../pages/membership/studentmember";
 
 
 function Router() {
@@ -94,7 +96,10 @@ function Router() {
           <Route path="/AboutMembership" element={<AboutMembership />} />
           <Route path="/ApplicationForMembership" element={<ApplicationForMembership />} />
           <Route path="/ListOfMembership" element={<LifeMembers />} />
+          <Route path="/OrdinaryMembers" element={<Ordinarymembers/>} />
+          <Route path="/StudentMembers" element={<StudentMember/>} />
 
+          {/* HPLA Activities paths */}
           <Route path="/LibraryAwards" element={<Awards/>} />
 
           {/* Misc Paths */}
