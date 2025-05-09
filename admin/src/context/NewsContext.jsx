@@ -47,7 +47,7 @@ export const NewsProvider = ({ children }) => {
   const fetchNews = async () => {
     dispatch({ type: "FETCH_NEWS_START" });
     try {
-      const response = await fetch("http://localhost:5000/news/get-news");
+      const response = await fetch("https://hpla.in/api/news/get-news");
       const data = await response.json();
       
       if (data.success) {
@@ -86,7 +86,7 @@ const addNews = async (newArticle) => {
       formData.append('images', newArticle.imageFiles[i]);
     }
 
-    const response = await fetch("http://localhost:5000/news/save-news", {
+    const response = await fetch("https://hpla.in/api/news/save-news", {
       method: "POST",
       body: formData
     });

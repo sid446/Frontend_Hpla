@@ -112,7 +112,7 @@ function Member() {
                 formData.append('avatar', avatarFile);
             }
     
-            const response = await axios.post('http://localhost:5000/member/update-member', formData, {
+            const response = await axios.post('https://hpla.in/api/member/update-member', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
     

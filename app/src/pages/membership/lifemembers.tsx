@@ -46,61 +46,58 @@ function LifeMembers() {
                     </div>
                 ) : (
                     <div className="flex flex-col flex-grow overflow-hidden">
-                        <div className="overflow-x-auto">
-                            <table className="w-full">
-                                <thead>
-                                    <tr className="bg-gray-50 text-left text-xs text-gray-500 uppercase tracking-wider">
-                                        <th className="px-6 py-3 font-medium sticky top-0 bg-gray-50">Name</th>
-                                        <th className="px-6 py-3 font-medium sticky top-0 bg-gray-50">Designation</th>
-                                        <th className="px-6 py-3 font-medium sticky top-0 bg-gray-50">Affiliation</th>
-                                        <th className="px-6 py-3 font-medium sticky top-0 bg-gray-50">Membership #</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div className="overflow-y-auto flex-grow">
-                            <table className="w-full">
-                                <tbody className="divide-y divide-gray-200">
-                                    {lifeMembers.map((member) => (
-                                        <tr key={member._id} className="hover:bg-gray-50">
-                                            <td className="px-6 py-4">
-                                                <div className="flex items-center space-x-3">
-                                                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
-                                                        <span className="text-blue-600 font-medium">
-                                                            {member.name.charAt(0).toUpperCase()}
-                                                        </span>
-                                                    </div>
-                                                    <div className="min-w-0">
-                                                        <p className="text-sm font-medium text-gray-900 truncate">
-                                                            {member.name}
-                                                        </p>
-                                                        <p className="text-sm text-gray-500 truncate">
-                                                            {member.mobile}
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                <div className="text-sm text-gray-900 max-w-xs truncate">
-                                                    {member.designation}
-                                                </div>
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                <div className="text-sm text-gray-900 max-w-xs truncate">
-                                                    {member.affiliation}
-                                                </div>
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 truncate max-w-[120px]">
-                                                    {member.memberShipNumber}
-                                                </span>
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+  <div className="overflow-x-auto">
+    <table className="w-full">
+      <thead>
+        <tr className="bg-gray-50 text-left text-xs text-gray-500 uppercase tracking-wider">
+          <th className="px-6 py-3 font-medium sticky top-0 bg-gray-50">Name</th>
+          <th className="px-6 py-3 font-medium sticky top-0 bg-gray-50">Designation</th>
+          <th className="px-6 py-3 font-medium sticky top-0 bg-gray-50">Affiliation</th>
+          <th className="px-6 py-3 font-medium sticky top-0 bg-gray-50">Membership #</th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-gray-200">
+        {lifeMembers.map((member) => (
+          <tr key={member._id} className="hover:bg-gray-50">
+            <td className="px-6 py-4">
+              <div className="flex items-center space-x-3">
+                <div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
+                  <span className="text-blue-600 font-medium">
+                    {member.name.charAt(0).toUpperCase()}
+                  </span>
+                </div>
+                <div className="min-w-0">
+                  <p className="text-sm font-medium text-gray-900 truncate">
+                    {member.name}
+                  </p>
+                  <p className="text-sm text-gray-500 truncate">
+                    {member.mobile}
+                  </p>
+                </div>
+              </div>
+            </td>
+            <td className="px-6 py-4">
+              <div className="text-sm text-gray-900 max-w-xs truncate">
+                {member.designation}
+              </div>
+            </td>
+            <td className="px-6 py-4">
+              <div className="text-sm text-gray-900 max-w-xs truncate">
+                {member.affiliation}
+              </div>
+            </td>
+            <td className="px-6 py-4">
+              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 truncate max-w-[120px]">
+                {member.memberShipNumber}
+              </span>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
+
                 )}
             </div>
         </div>

@@ -47,7 +47,7 @@ function UserSignup() {
                 password: formData.password 
             }
             
-            const response = await axios.post(`http://localhost:5000/user/register`, userData)
+            const response = await axios.post(`https://hpla.in/api/user/register`, userData)
             
             if (response.status === 200) {
                 setOtpSent(true)
@@ -73,7 +73,7 @@ function UserSignup() {
                 otp: otp 
             }
             
-            const response = await axios.post(`http://localhost:5000/user/verify-otp`, verificationData)
+            const response = await axios.post(`https://hpla.in/api/user/verify-otp`, verificationData)
             
             if (response.status === 200) {
                 const data = response.data

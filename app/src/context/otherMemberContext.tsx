@@ -86,7 +86,7 @@ export const OtherMemberProvider: React.FC<{ children: React.ReactNode }> = ({ c
     const fetchOtherMembers = async (): Promise<{ success: boolean; data?: Member[]; message?: string }> => {
         dispatch({ type: "FETCH_MEMBERS_START" });
         try {
-            const response = await fetch('http://localhost:5000/otherMember/get-other-members');
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/otherMember/get-other-members`);
             
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);

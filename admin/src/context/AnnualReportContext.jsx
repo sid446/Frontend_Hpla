@@ -52,7 +52,7 @@ export const AnnualReportProvider = ({ children }) => {
     const fetchAnnualReports = async () => {
         dispatch({ type: "FETCH_ANNUAL_REPORTS_START" });
         try {
-            const response = await fetch("http://localhost:5000/annual/get-annual");
+            const response = await fetch("https://hpla.in/api/annual/get-annual");
             const data = await response.json();
 
             if (data.success) {
@@ -67,7 +67,7 @@ export const AnnualReportProvider = ({ children }) => {
     const updateAnnualReport = async (updatedReport) => {
         dispatch({type: "UPDATE_ANNUAL_REPORT_START"});
         try {
-            const response = await fetch(`http://localhost:5000/annual/edit-annual`, {
+            const response = await fetch(`https://hpla.in/api/annual/edit-annual`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -88,7 +88,7 @@ export const AnnualReportProvider = ({ children }) => {
     const deleteAnnualReport = async (id) => {
         dispatch({ type: "DELETE_ANNUAL_REPORT_START" });
         try {
-            const response = await fetch(`http://localhost:5000/annual/delete-annual`, {
+            const response = await fetch(`https://hpla.in/api/annual/delete-annual`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -112,7 +112,7 @@ export const AnnualReportProvider = ({ children }) => {
     const addAnnualReport = async (newAnnualReport) => {
         dispatch({ type: "ADD_ANNUAL_REPORT_START" });
         try {
-            const response = await fetch("http://localhost:5000/annual/create-annual", {
+            const response = await fetch("https://hpla.in/api/annual/create-annual", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

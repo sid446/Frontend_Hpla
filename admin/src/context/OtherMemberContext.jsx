@@ -86,7 +86,7 @@ export const OtherMemberProvider = ({ children }) => {
     const fetchOtherMembers = async () => {
         dispatch({ type: "FETCH_MEMBERS_START" });
         try {
-            const response = await axios.get('http://localhost:5000/otherMember/get-other-members');
+            const response = await axios.get('https://hpla.in/api/otherMember/get-other-members');
             if (response.data && response.data.statusCode === 200) {
                 dispatch({ 
                     type: "FETCH_MEMBERS_SUCCESS", 
@@ -116,7 +116,7 @@ export const OtherMemberProvider = ({ children }) => {
     const addOtherMember = async (memberData) => {
         try {
             const response = await axios.post(
-                'http://localhost:5000/otherMember/save-other-member', 
+                'https://hpla.in/api/otherMember/save-other-member', 
                 memberData,
                 { 
                     headers: { 
@@ -175,7 +175,7 @@ export const OtherMemberProvider = ({ children }) => {
             };
     
             const response = await axios.post(
-                'http://localhost:5000/otherMember/update-other-member', 
+                'https://hpla.in/api/otherMember/update-other-member', 
                 updateData,
                 { 
                     headers: { 
@@ -212,7 +212,7 @@ export const OtherMemberProvider = ({ children }) => {
         
         try {
             const response = await axios.delete(
-                `http://localhost:5000/otherMember/delete-other-member/${memberId}`
+                `https://hpla.in/api/otherMember/delete-other-member/${memberId}`
                 // No /api prefix since you're using app.use("/otherMember")
             );
             

@@ -67,7 +67,7 @@ function PhotoGalleryManager() {
         setError(null);
         
         try {
-            const response = await axios.get('http://localhost:5000/gallery/get-photo');
+            const response = await axios.get('https://hpla.in/api/gallery/get-photo');
             setPhotos(response.data.data);
         } catch (err) {
             setError('Failed to fetch photos. Please try again later.');
@@ -106,7 +106,7 @@ function PhotoGalleryManager() {
         
         try {
             const response = await axios.post(
-                'http://localhost:5000/gallery/save-photo', 
+                'https://hpla.in/api/gallery/save-photo', 
                 formData, 
                 {
                     headers: {
@@ -159,7 +159,7 @@ function PhotoGalleryManager() {
         
         try {
             const response = await axios.post(
-                'http://localhost:5000/gallery/update-photo',
+                'https://hpla.in/api/gallery/update-photo',
                 editForm
             );
             
@@ -176,7 +176,7 @@ function PhotoGalleryManager() {
     const handleDeletePhoto = async (id) => {
       if (window.confirm('Are you sure you want to delete this photo?')) {
           try {
-              await axios.post(`http://localhost:5000/gallery/delete`, {id});
+              await axios.post(`https://hpla.in/api/gallery/delete`, {id});
               fetchPhotos();
               handleClosePopup();
               setSuccessMessage('Photo deleted successfully!');

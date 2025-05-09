@@ -15,7 +15,7 @@ function UserProtectedWrapper({children}) {
             navigate('/login')
             return
         }
-         axios.get(`http://localhost:5000/user/protected`,{
+         axios.get(`https://hpla.in/api/user/protected`,{
             headers:{
               Authorization:`Bearer ${token}`
             }}).then(response=>{

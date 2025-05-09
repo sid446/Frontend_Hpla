@@ -150,7 +150,7 @@ function NewsAdminPage() {
     try {
       console.log("Deleting article with ID:", selectedArticle,_id);
       setDeleteLoading(true);
-      const response = await fetch("http://localhost:5000/news/delete-news", {
+      const response = await fetch("https://hpla.in/api/news/delete-news", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',

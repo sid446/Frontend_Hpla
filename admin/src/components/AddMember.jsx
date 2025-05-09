@@ -126,7 +126,7 @@ const AddMemberPage = ({ className = "" }) => {
         
         formDataToSend.append('avatar', avatarFile);
         
-        const response = await axios.post('http://localhost:5000/member/save-member', formDataToSend, {
+        const response = await axios.post('https://hpla.in/api/member/save-member', formDataToSend, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }

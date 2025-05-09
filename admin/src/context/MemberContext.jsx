@@ -34,7 +34,7 @@ export const MemberProvider = ({ children }) => {
   const fetchMembers = async () => {
     dispatch({ type: "FETCH_MEMBERS_START" });
     try {
-      const response = await fetch("http://localhost:5000/member/get-members"); // Update with your API URL
+      const response = await fetch("https://hpla.in/api/member/get-members"); // Update with your API URL
       const data = await response.json();
       
       if (data.success) {
