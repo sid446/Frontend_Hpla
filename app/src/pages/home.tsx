@@ -16,8 +16,8 @@ import flyer from "../assets/hpla-icons/flyer.png";
 
 function Home() {
   return (
-    <main className="grid grid-cols-1 gap-4 ">
-      <div className="InfoBox">
+    <main className="grid grid-cols-1 gap-4  ">
+      <div className="InfoBox scrollbar-hide ">
       <h1 className="text-3xl text-center my-4">Membership</h1>
       <hr />
       <div className="flex flex-wrap justify-around m-5 gap-4 ">

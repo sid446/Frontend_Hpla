@@ -9,7 +9,7 @@ interface LayoutProps {
 
 function Layout({ children }: LayoutProps) {
   return (
-    <main className="flex flex-col min-h-screen mx-[0.7vw] ">
+    <main className="flex flex-col min-h-screen mx-[0.7vw] scrollbar-hide">
       <Navbar />
 
       <div className="flex flex-wrap">

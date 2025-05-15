@@ -16,10 +16,13 @@ import AddOtherMemberPage from './components/AddOtherMember';
 import News from './pages/News';
 import { NewsProvider } from './context/NewsContext';
 import AnnualReport from './pages/AnnualReport';
+import NoticeBoard from './pages/NoticeBoard';
+
 
 function App() {
   return (
     <>
+    
      <NewsProvider>
      <OtherMemberProvider>
       <Routes>
@@ -153,6 +156,23 @@ function App() {
             
           } 
         />
+        <Route 
+          path="/noticeboard" 
+          element={
+            <UserProtectedWrapper>
+              <div className='bg-[#1D1B45]'>  {/* ✅ Wrap multiple elements inside a div */}
+                <Header />
+                <div className='flex '>
+                <Sidebar />
+               
+               <NoticeBoard/>
+                
+                </div>
+              </div>
+            </UserProtectedWrapper>
+          } 
+        />
+        
        
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

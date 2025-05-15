@@ -19,7 +19,7 @@ function Sidebar() {
     { path: "/gallery", icon: <BookImage size={20} />, label: "Gallery" },
     { path: "/news", icon: <Newspaper size={20} />, label: "News" },
     { path: "/annual-report", icon: <FileText size={20} />, label: "Annual Report" },
-    { path: "/messages", icon: <Mail size={20} />, label: "Messages" },
+    { path: "/noticeboard", icon: <Mail size={20} />, label: "Notice Board" },
     { path: "/settings", icon: <Settings size={20} />, label: "Settings" },
   ];
 

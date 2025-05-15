@@ -212,3 +212,46 @@ p {
 .li-margin li {
   margin-bottom: 1rem;
 }
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+.animate-border {
+  --border-width: 3px;
+  position: relative;
+  border-radius: 0.75rem;
+  padding: var(--border-width);
+  background: linear-gradient(
+    90deg,
+    #026ced,
+    #024bc0,
+    #022f8f,
+    #030885
+  );
+  background-size: 300% 100%;
+  animation: gradientMove 8s linear infinite;
+}
+
+.animate-border::before {
+  content: "";
+  position: absolute;
+  inset: var(--border-width);
+  background: white;
+  border-radius: 0.5rem;
+  z-index: 0;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
