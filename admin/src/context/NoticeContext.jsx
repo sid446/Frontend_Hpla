@@ -78,7 +78,7 @@ const NoticeBoardContext = createContext();
 // Provider with enhanced error handling
 export const NoticeBoardProvider = ({ children }) => {
   const [state, dispatch] = useReducer(noticeReducer, initialState);
-  const API = "http://localhost:5000/api/notice";
+  const API = "https://hpla.in/api/notice";
 
   // Fetch notices with retry logic
   const fetchNotices = async () => {

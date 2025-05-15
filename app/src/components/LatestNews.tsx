@@ -22,7 +22,7 @@ const NoticeBoard = () => {
   useEffect(() => {
     const fetchNotices = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/notice/getNotice');
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/notice/getNotice`);
         if (!response.ok) throw new Error('Failed to fetch notices');
         const data = await response.json();
         setNotices(data.data || []);
