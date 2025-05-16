@@ -127,7 +127,8 @@ const NoticeBoard = () => {
               <div className="bg-blue-500 bg-opacity-10 p-1.5 rounded-full">
                 <Bell size={16} className="text-blue-600" />
               </div>
-              <h2 className="text-base font-semibold text-gray-800 tracking-tight">Notice Board</h2>
+              <h2 className="text-2xl sm:text-2xl md:text-lg lg:text-2xl font-bold text-[#00069C] tracking-tight ml-[3.5rem] sm:ml-[3.5rem] md:ml-[0.5rem] lg:ml-[3.5rem]
+">Notice Board</h2>
             </div>
             <div className="flex gap-1">
               {notices.map((_, index) => (
@@ -180,7 +181,7 @@ const NoticeBoard = () => {
           {/* Scrollable List */}
           <div
             ref={newsRef}
-            className="max-h-[200px] overflow-y-auto divide-y divide-gray-100 scrollbar-hide"
+            className="max-h-[200px] overflow-y-auto divide-y divide-gray-100 "
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >

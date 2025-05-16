@@ -171,31 +171,35 @@ const NoticeBoard = () => {
             <AnimatePresence>
               {notices.filter(notice => notice).map((notice, index) => (
                 <motion.div 
-                  key={notice._id || index}
-                  className="bg-zinc-700/50 p-5 rounded-lg border border-zinc-600/50 hover:border-indigo-500/30 cursor-pointer transition-all hover:shadow-lg hover:shadow-indigo-500/10"
-                  whileHover={{ y: -4, backgroundColor: "rgba(67, 56, 202, 0.1)" }}
-                  onClick={() => openModal(notice)}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.1 + (index * 0.05) }}
-                >   
-                  <div className="flex items-start gap-4">
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center text-white shrink-0">
-                      <FileText size={24} />
-                    </div>
-                    
-                    <div className="flex-1">
-                      <h3 className="font-medium text-white text-lg">{notice.title || 'Untitled Notice'}</h3>
-                      {notice.slug && (
-                        <p className="text-indigo-300 text-sm mb-2">/{notice.slug}</p>
-                      )}
-                      
-                      <p className="text-zinc-400 text-sm mb-3 line-clamp-2">
-                        {notice.description || 'No description provided'}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
+  key={notice._id || index}
+  className="bg-zinc-700/50 p-5 rounded-lg border border-zinc-600/50 hover:border-indigo-500/30 cursor-pointer transition-all hover:shadow-lg hover:shadow-indigo-500/10"
+  whileHover={{ y: -4, backgroundColor: "rgba(67, 56, 202, 0.1)" }}
+  onClick={() => openModal(notice)}
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.3, delay: 0.1 + (index * 0.05) }}
+>   
+  <div className="flex items-start gap-4">
+    <div className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center text-white shrink-0">
+      <FileText size={24} />
+    </div>
+    
+    <div className="flex-1 min-w-0"> {/* Added min-w-0 to enable text truncation */}
+      <h3 className="font-medium text-white text-lg truncate" title={notice.title || 'Untitled Notice'}>
+        {notice.title || 'Untitled Notice'}
+      </h3>
+      {notice.slug && (
+        <p className="text-indigo-300 text-sm mb-2 truncate" title={notice.slug}>
+          {notice.slug}
+        </p>
+      )}
+      
+      <p className="text-zinc-400 text-sm mb-3 line-clamp-2" title={notice.description || 'No description provided'}>
+        {notice.description || 'No description provided'}
+      </p>
+    </div>
+  </div>
+</motion.div>
               ))}
             </AnimatePresence>
           </div>

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { User, Users, Menu, ChevronRight, Settings, Home, FileText, BarChart, Mail,BookImage,Newspaper } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { User, Users, Menu, ChevronRight, Settings, Home, FileText, BarChart, Mail, BookImage, Newspaper, LogOut } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 function Sidebar() {
   const [expanded, setExpanded] = useState(true);
   const [animate, setAnimate] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Trigger animation after component mounts
@@ -44,6 +45,11 @@ function Sidebar() {
       x: 0,
       transition: { duration: 0.3 }
     }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
   };
 
   return (
@@ -120,7 +126,20 @@ function Sidebar() {
         </ul>
       </nav>
       
-      
+      {/* Logout Button */}
+      <div className="absolute bottom-0 w-full px-4 py-3 border-t border-indigo-900/40">
+        <motion.button
+          onClick={handleLogout}
+          className="w-full flex items-center gap-3 text-indigo-300 hover:text-red-400 hover:bg-red-900/20 px-3 py-2 rounded-lg transition-all"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <motion.div whileHover={{ rotate: -10 }}>
+            <LogOut size={20} />
+          </motion.div>
+          {expanded && <span className="text-sm font-medium">Logout</span>}
+        </motion.button>
+      </div>
     </motion.div>
   );
 }
